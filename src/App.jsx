@@ -1464,7 +1464,7 @@ function App() {
                       ? '#4caf50' // Green for correct answer
                       : selectedAnswer === option
                       ? '#f44336' // Red for incorrect answer
-                      : '#3f3f4e'), // Default background color
+                      : '#a9a9a9'), // Default background color
                   color: '#000', // Text color
                 }}
               >
