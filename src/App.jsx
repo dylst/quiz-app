@@ -98,7 +98,7 @@ const questions = [
       'int myarray[5] = { 0, 1, 2, 3, 4, 5 };',
       'int myarray[4] = { 0, 1, 2, 3 };',
     ],
-    correctAnswer: 'int myarray[4] = { 0, 1, 2, 3 };',
+    correctAnswer: 'int myarray[5] = { 0, 1, 2, 3, 4, 5 };',
   },
   {
     question: (
@@ -138,7 +138,7 @@ const questions = [
       'int somearray[9] = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };',
       'int somearray[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };',
     ],
-    correctAnswer: 'The correct answer is not listed',
+    correctAnswer: 'int somearray[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };',
   },
   {
     question: (
@@ -296,6 +296,9 @@ const questions = [
         Suppose that you declare an array int arr_num[10]. Assuming the function
         declaration statement given below, what would you use to pass the array
         to the given function?
+        <br />
+        <br />
+        int sum_arr(int a[]);
       </div>
     ),
     options: [
@@ -366,7 +369,7 @@ const questions = [
       'The program does not compile due to a syntax error.',
       'Black',
     ],
-    correctAnswer: 'n',
+    correctAnswer: 'e',
   },
   {
     question: (
@@ -408,7 +411,7 @@ const questions = [
       '10000',
       'It will yield a compiler error.',
     ],
-    correctAnswer: '10000',
+    correctAnswer: 'It will yield a compiler error.',
   },
   {
     question: (
@@ -438,7 +441,7 @@ const questions = [
       </div>
     ),
     options: ['10', 'steve', '6', '5'],
-    correctAnswer: '6',
+    correctAnswer: '5',
   },
   {
     question: (
@@ -514,7 +517,7 @@ const questions = [
       'pass by reference',
       'pass by struct',
     ],
-    correctAnswer: 'pass by reference',
+    correctAnswer: 'pass by value',
   },
   {
     question: (
@@ -528,7 +531,7 @@ const questions = [
       </div>
     ),
     options: ['20', 'None of these', '7', '8'],
-    correctAnswer: '7',
+    correctAnswer: 'None of these',
   },
   {
     question: (
@@ -559,7 +562,7 @@ const questions = [
       </div>
     ),
     options: ['5', '6', 'No output, compiler error', 'Idaho'],
-    correctAnswer: '5',
+    correctAnswer: '6',
   },
   {
     question: (
@@ -592,7 +595,7 @@ const questions = [
       </div>
     ),
     options: ['30/40', '40/35', '40/30', '35/40'],
-    correctAnswer: '40/30',
+    correctAnswer: '40/35',
   },
   {
     question: (
@@ -651,7 +654,7 @@ const questions = [
       'Line 3 has a problem because word2 is bigger than word1',
       'Line 4 will print: helloworld',
     ],
-    correctAnswer: 'Line 4 will print: helloworld',
+    correctAnswer: 'None of these answers is correct',
   },
   {
     question: (
@@ -701,7 +704,7 @@ const questions = [
       'Cheetah speed: 0',
       'Cheetah speed:',
     ],
-    correctAnswer: 'Cheetah speed: 144',
+    correctAnswer: 'The code snippet does not compile.',
   },
   {
     question: <div>In C++, which statement about constructors is true?</div>,
@@ -726,7 +729,7 @@ const questions = [
       'The member functions of every class can access the data members.',
     ],
     correctAnswer:
-      'Only private member functions of the same class can access these data members.',
+      'Only the member functions of the same class can access the data members.',
   },
   {
     question: (
@@ -810,7 +813,7 @@ const questions = [
         <br />
         int a = 3, b = 4;
         <br />
-        {`cout << a&gt;b?a:b;`}
+        {`cout << a>b?a:b;`}
       </div>
     ),
     options: ['It will not compile', '3', '4', '7'],
@@ -838,7 +841,7 @@ const questions = [
         <br />
         {`{`}
         <br />
-        {`cout &lt;&lt; "Hello World\n";`}
+        {`cout << "Hello World\n";`}
         <br />
         return 0;
         <br />
@@ -926,7 +929,7 @@ const questions = [
       '11',
       '1',
     ],
-    correctAnswer: 'all the numbers in the array',
+    correctAnswer: 'the correct answer is not listed',
   },
   {
     question: (
@@ -944,7 +947,7 @@ const questions = [
         <br />
         {`{`}
         <br />
-        {`vector&lt;int&gt; v;`}
+        vector&lt;int&gt; v;
         <br />
         for (int i=0; i&lt;10; i++)
         <br />
@@ -1070,7 +1073,7 @@ const questions = [
         <br />
         {`{`}
         <br />
-        {`cout &lt;&lt; "hello-";`}
+        cout &lt;&lt; {`"hello-";`}
         <br />
         throw 42;
         <br />
@@ -1084,9 +1087,9 @@ const questions = [
         <br />
         catch ( const char * s)
         <br />
-        {`{ cout &lt;&lt; "world-"; }`}
+        &#9; {`{ cout << "world-"; }`}
         <br />
-        {`cout &lt;&lt; "awesome-";`}
+        {`cout << "awesome-";`}
         <br />
         return 0;
         <br />
@@ -1116,7 +1119,7 @@ const questions = [
         <br />
         throw 42;
         <br />
-        {`cout &lt;&lt; "hello-";`}
+        {`cout << "hello-";`}
         <br />
         {`}`}
         <br />
@@ -1128,9 +1131,9 @@ const questions = [
         <br />
         catch (...)
         <br />
-        {`{ cout &lt;&lt; "world-"; }`}
+        {`{ cout << "world-"; }`}
         <br />
-        {`cout &lt;&lt; "awesome-";`}
+        {`cout << "awesome-";`}
         <br />
         return 0;
         <br />
@@ -1398,6 +1401,7 @@ function App() {
   const [showResult, setShowResult] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
   const [correctAnswer, setCorrectAnswer] = useState(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const handleAnswerClick = (selectedOption) => {
     if (selectedOption === questions[currentQuestion].correctAnswer) {
@@ -1409,12 +1413,14 @@ function App() {
       setCorrectAnswer(questions[currentQuestion].correctAnswer);
     }
     setShowResult(true);
+    setSelectedAnswer(selectedOption);
   };
 
   const handleNextClick = () => {
     setShowResult(false);
     setUserAnswer(null);
     setCorrectAnswer(null);
+    setSelectedAnswer(null);
     setCurrentQuestion(currentQuestion + 1);
   };
 
@@ -1422,6 +1428,7 @@ function App() {
     setShowResult(false);
     setUserAnswer(null);
     setCorrectAnswer(null);
+    setSelectedAnswer(null);
     setCurrentQuestion(currentQuestion - 1);
   };
 
@@ -1431,6 +1438,7 @@ function App() {
     setShowResult(false);
     setUserAnswer(null);
     setCorrectAnswer(null);
+    setSelectedAnswer(null);
   };
 
   return (
@@ -1454,7 +1462,7 @@ function App() {
                     showResult &&
                     (option === questions[currentQuestion].correctAnswer
                       ? '#4caf50' // Green for correct answer
-                      : userAnswer === option
+                      : selectedAnswer === option
                       ? '#f44336' // Red for incorrect answer
                       : '#000'), // Default background color
                   color: '#fff', // Text color
